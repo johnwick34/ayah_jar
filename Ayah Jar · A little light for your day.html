@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ayah Jar · A little light for your day</title>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fff8ee;--card:#fff;--ink:#2b3a38;--soft:#667876;--accent:#0f9d86;--sun:#ffc857;--line:#f0e2c8;--tint:#e4f6f1;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#17211f;--card:#203230;--ink:#f3efe6;--soft:#a9bdb8;--line:#33504b;--tint:#27413d}}
+:root[data-theme="dark"]{--bg:#17211f;--card:#203230;--ink:#f3efe6;--soft:#a9bdb8;--line:#33504b;--tint:#27413d}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Nunito,system-ui,sans-serif;line-height:1.6}
+main{max-width:600px;margin:0 auto;padding:18px 16px 48px}
+.i{width:1.15em;height:1.15em;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;vertical-align:-.2em;flex:none}
+h1{font-size:1.7rem;margin:.1em 0;text-align:center}
+h2{font-size:1.15rem;margin:28px 0 8px;display:flex;gap:8px;align-items:center}
+h2 .i{color:var(--accent)}
+.hero{text-align:center;background:linear-gradient(160deg,#ffe9b8,#c9f0e6);border-radius:26px;padding:20px 14px;color:#2b3a38}
+.hero .jar{width:76px;height:76px;stroke-width:1.4;color:#0f9d86}
+.dates{display:inline-flex;gap:6px;align-items:center;background:#ffffffb8;border-radius:999px;padding:4px 14px;font-size:.88rem;font-weight:700;margin:4px 0 8px}
+.sub{margin:0 0 6px}
+button{font:inherit;cursor:pointer;border:0;display:inline-flex;gap:8px;align-items:center;justify-content:center}
+.chips{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:10px}
+.chip{background:#fff;color:#2b3a38;border-radius:999px;padding:10px 15px;font-weight:700;box-shadow:0 2px 0 rgba(0,0,0,.08)}
+.chip .i{color:#0f9d86}
+.go{background:var(--accent);color:#fff;border-radius:999px;padding:12px 20px;font-weight:800}
+.alt{background:var(--tint);color:var(--ink);border-radius:999px;padding:11px 18px;font-weight:700}
+.chip:active,.go:active,.alt:active{transform:scale(.96)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:20px 16px;margin:16px 0;box-shadow:0 6px 18px rgba(0,0,0,.06)}
+.tag{display:inline-flex;gap:6px;align-items:center;background:var(--sun);color:#3a2d00;border-radius:999px;padding:2px 12px;font-size:.8rem;font-weight:800}
+.ar{font-family:Amiri,serif;font-size:2rem;line-height:2.1;text-align:center;direction:rtl;margin:10px 0}
+.ref{text-align:center;color:var(--soft);font-size:.9rem}
+.mean{font-size:1.1rem;text-align:center;font-weight:600}
+details{border-top:1px solid var(--line);padding:10px 0}
+summary{font-weight:800;cursor:pointer;color:var(--accent);display:flex;gap:8px;align-items:center}
+.src{color:var(--soft);font-size:.85rem}
+.row{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-top:12px}
+.today h3{margin:.2em 0}
+.badge{display:inline-flex;gap:6px;align-items:center;background:var(--tint);color:var(--accent);border-radius:12px;padding:6px 12px;font-weight:800;margin:3px 4px 3px 0;font-size:.9rem}
+select,input{font:inherit;padding:12px 14px;border-radius:14px;border:1px solid var(--line);background:var(--bg);color:var(--ink);max-width:100%}
+.ctl{display:flex;gap:8px;flex-wrap:wrap}
+.ctl select{flex:1;min-width:150px}
+.v{padding:12px 0;border-bottom:1px dashed var(--line)}
+.v .ar{font-size:1.6rem;margin:0}
+.v small{color:var(--soft)}
+form{display:flex;flex-direction:column;gap:10px}
+.note{font-size:.85rem;color:var(--soft)}
+footer{text-align:center;color:var(--soft);font-size:.85rem;margin-top:28px}
+</style></head><body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<symbol id="i-jar" viewBox="0 0 24 24"><rect x="7" y="2.5" width="10" height="3.5" rx="1"/><path d="M8 6h8c2 2 3 4 3 8v4a3 3 0 0 1-3 3H8a3 3 0 0 1-3-3v-4c0-4 1-6 3-8z"/><circle cx="10" cy="14" r="1.3"/><circle cx="14.5" cy="12" r="1.3"/><circle cx="13" cy="17" r="1.3"/></symbol>
+<symbol id="i-cloud" viewBox="0 0 24 24"><path d="M18 10h-1.3A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></symbol>
+<symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></symbol>
+<symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></symbol>
+<symbol id="i-heart" viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21l7.8-7.5 1-1.1a5.5 5.5 0 0 0 0-7.8z"/></symbol>
+<symbol id="i-shuffle" viewBox="0 0 24 24"><path d="M16 3h5v5M4 20 21 3M21 16v5h-5M15 15l6 6M4 4l5 5"/></symbol>
+<symbol id="i-moon" viewBox="0 0 24 24"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></symbol>
+<symbol id="i-book" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></symbol>
+<symbol id="i-scroll" viewBox="0 0 24 24"><path d="M8 21h11a2 2 0 0 0 2-2v-1H10v1a2 2 0 0 1-2 2zm0 0a2 2 0 0 1-2-2V5a2 2 0 0 0-2-2h13a2 2 0 0 1 2 2v13M9 8h6M9 12h6"/></symbol>
+<symbol id="i-leaf" viewBox="0 0 24 24"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.5 19 2c1 2 2 4.2 2 8 0 5.5-4.8 10-10 10zM2 21c0-3 1.9-5.4 5.1-6.5"/></symbol>
+<symbol id="i-cal" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></symbol>
+<symbol id="i-bell" viewBox="0 0 24 24"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9M13.7 21a2 2 0 0 1-3.4 0"/></symbol>
+<symbol id="i-mail" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></symbol>
+<symbol id="i-down" viewBox="0 0 24 24"><path d="M12 3v12M7 10l5 5 5-5M4 21h16"/></symbol>
+<symbol id="i-star" viewBox="0 0 24 24"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8-6.2-3.3-6.2 3.3L8 14.2 3 9.3l6.9-1z"/></symbol>
+</defs></svg>
+<main>
+<div class="hero">
+<svg class="i jar"><use href="#i-jar"/></svg>
+<h1>Ayah Jar</h1>
+<div class="dates" id="dates"></div>
+<p class="sub">One ayah can light up a whole day.<br>How is your heart today?</p>
+<div class="chips" id="moods"></div>
+</div>
+
+<section class="card" id="card" aria-live="polite"></section>
+
+<h2><svg class="i"><use href="#i-sun"/></svg>Today</h2>
+<section class="card today" id="today"></section>
+
+<h2><svg class="i"><use href="#i-book"/></svg>The Holy Quran</h2>
+<div class="card">
+<p class="note" style="margin-top:0">All 114 surahs, every ayah. Choose a surah, or draw a random ayah from the whole Quran.</p>
+<div class="ctl"><select id="surah" aria-label="Surah"></select><button class="go" id="read">Read</button></div>
+<div class="row" style="justify-content:flex-start"><button class="alt" id="rnd"><svg class="i"><use href="#i-shuffle"/></svg>Random ayah from the Quran</button></div>
+<div id="reader"></div>
+</div>
+
+<h2><svg class="i"><use href="#i-bell"/></svg>Daily ayah by email</h2>
+<div class="card">
+<p style="margin-top:0">Join the list and receive a random ayah in your inbox, at a different time each day.</p>
+<form id="sub"><input type="email" id="email" placeholder="your@email.com" required aria-label="Email"><button class="go" type="submit"><svg class="i"><use href="#i-mail"/></svg>Join email list</button></form>
+<p class="note" id="msg">One gentle email a day. Unsubscribe anytime.</p>
+</div>
+<footer>Please verify references with a trusted scholar.</footer>
+</main>
+<script>
+const $=id=>document.getElementById(id),ico=n=>`<svg class="i"><use href="#i-${n}"/></svg>`;
+const D=[
+{ref:"Ash-Sharh 94:5-6",ar:"فَإِنَّ مَعَ الْعُسْرِ يُسْرًا ۝ إِنَّ مَعَ الْعُسْرِ يُسْرًا",en:"Truly, with hardship comes ease. Truly, with hardship comes ease.",m:["sad","anxious","hope"],
+r:"The promise is repeated twice. Ease doesn’t only come after your hardship; it comes with it, already on its way.",
+s:"After the Prophet ﷺ was rejected and hurt at Ta’if, he did not curse the people. He prayed that Allah bring from them those who would worship Him alone.",sr:"Sahih al-Bukhari 3231; Sahih Muslim 1795",
+h:"No fatigue, illness, sorrow, harm or worry afflicts a Muslim, even a thorn’s prick, except that Allah expiates some of his sins by it.",hr:"Sahih al-Bukhari 5641; Sahih Muslim 2573"},
+{ref:"Ar-Ra’d 13:28",ar:"أَلَا بِذِكْرِ اللَّهِ تَطْمَئِنُّ الْقُلُوبُ",en:"Indeed, in the remembrance of Allah do hearts find rest.",m:["sad","anxious","happy"],
+r:"Peace isn’t always found by changing the situation. Sometimes it is found by turning toward Allah in it.",
+s:"In the cave during the Hijrah, Abu Bakr feared for the Prophet ﷺ. He answered calmly: do not grieve, Allah is with us.",sr:"Quran 9:40; Sahih al-Bukhari 3653",
+h:"The one who remembers his Lord and the one who does not are like the living and the dead.",hr:"Sahih al-Bukhari 6407"},
+{ref:"Ibrahim 14:7 (part)",ar:"لَئِن شَكَرْتُمْ لَأَزِيدَنَّكُمْ",en:"If you are grateful, I will surely give you more.",m:["happy","grateful"],
+r:"Gratitude is a magnet for more good. Name three blessings today, however small.",
+s:"The Prophet ﷺ prayed at night until his feet swelled. When Aisha asked why, since he was forgiven, he said: should I not be a thankful servant?",sr:"Sahih al-Bukhari 4837; Sahih Muslim 2820",
+h:"Whoever does not thank people does not thank Allah.",hr:"Sunan Abi Dawud 4811"},
+{ref:"Al-Baqarah 2:286 (part)",ar:"لَا يُكَلِّفُ اللَّهُ نَفْسًا إِلَّا وُسْعَهَا",en:"Allah does not burden any soul beyond what it can bear.",m:["sad","anxious"],
+r:"If it is on your shoulders, you were given the strength for it. You are stronger than this moment.",
+s:"Prophet Ayyub (Job) endured long illness and loss with patience, calling on his Lord, and Allah answered him.",sr:"Quran 21:83-84; 38:41-44",
+h:"How wonderful is the affair of the believer: all of it is good. In ease he is grateful, in hardship he is patient, and both are good for him.",hr:"Sahih Muslim 2999"},
+{ref:"Az-Zumar 39:53 (part)",ar:"لَا تَقْنَطُوا مِن رَّحْمَةِ اللَّهِ",en:"Do not lose hope in the mercy of Allah.",m:["sad","hope","anxious"],
+r:"No mistake is bigger than His mercy. The door of returning is always open.",
+s:"The man who had killed ninety-nine people sincerely sought repentance, set out toward a righteous land, and was met by mercy.",sr:"Sahih al-Bukhari 3470; Sahih Muslim 2766",
+h:"When Allah created creation, He wrote in a book above the Throne: My mercy prevails over My wrath.",hr:"Sahih al-Bukhari 7404; Sahih Muslim 2751"}];
+const L={sad:["cloud","Sad"],anxious:["shield","Worried"],happy:["sun","Happy"],grateful:["heart","Grateful"],any:["shuffle","Surprise me"]};
+const N="Al-Fatihah,Al-Baqarah,Ali ʿImran,An-Nisa,Al-Ma’idah,Al-An’am,Al-A’raf,Al-Anfal,At-Tawbah,Yunus,Hud,Yusuf,Ar-Ra’d,Ibrahim,Al-Hijr,An-Nahl,Al-Isra,Al-Kahf,Maryam,Taha,Al-Anbiya,Al-Hajj,Al-Mu’minun,An-Nur,Al-Furqan,Ash-Shu’ara,An-Naml,Al-Qasas,Al-ʿAnkabut,Ar-Rum,Luqman,As-Sajdah,Al-Ahzab,Saba,Fatir,Ya-Sin,As-Saffat,Sad,Az-Zumar,Ghafir,Fussilat,Ash-Shura,Az-Zukhruf,Ad-Dukhan,Al-Jathiyah,Al-Ahqaf,Muhammad,Al-Fath,Al-Hujurat,Qaf,Adh-Dhariyat,At-Tur,An-Najm,Al-Qamar,Ar-Rahman,Al-Waqi’ah,Al-Hadid,Al-Mujadila,Al-Hashr,Al-Mumtahanah,As-Saff,Al-Jumu’ah,Al-Munafiqun,At-Taghabun,At-Talaq,At-Tahrim,Al-Mulk,Al-Qalam,Al-Haqqah,Al-Ma’arij,Nuh,Al-Jinn,Al-Muzzammil,Al-Muddaththir,Al-Qiyamah,Al-Insan,Al-Mursalat,An-Naba,An-Nazi’at,ʿAbasa,At-Takwir,Al-Infitar,Al-Mutaffifin,Al-Inshiqaq,Al-Buruj,At-Tariq,Al-A’la,Al-Ghashiyah,Al-Fajr,Al-Balad,Ash-Shams,Al-Layl,Ad-Duha,Ash-Sharh,At-Tin,Al-ʿAlaq,Al-Qadr,Al-Bayyinah,Az-Zalzalah,Al-ʿAdiyat,Al-Qari’ah,At-Takathur,Al-ʿAsr,Al-Humazah,Al-Fil,Quraysh,Al-Ma’un,Al-Kawthar,Al-Kafirun,An-Nasr,Al-Masad,Al-Ikhlas,Al-Falaq,An-Nas".split(",");
+const C=[7,286,200,176,120,165,206,75,129,109,123,111,43,52,99,128,111,110,98,135,112,78,118,64,77,227,93,88,69,60,34,30,73,54,45,83,182,88,75,85,54,53,89,59,37,35,38,29,18,45,60,49,62,55,78,96,29,22,24,13,14,11,11,18,12,12,30,52,52,44,28,28,20,56,40,31,50,40,46,42,29,19,36,25,22,17,19,26,30,20,15,21,11,8,8,19,5,8,8,11,11,8,3,9,5,4,7,3,6,3,5,4,5,6];
+// Built-in fallback surahs (used if the full Quran cannot be loaded)
+const F={1:[["بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ","In the name of Allah, the Most Gracious, the Most Merciful."],["الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ","All praise is for Allah, Lord of all worlds."],["الرَّحْمَٰنِ الرَّحِيمِ","The Most Gracious, the Most Merciful."],["مَالِكِ يَوْمِ الدِّينِ","Master of the Day of Judgment."],["إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ","You alone we worship, and You alone we ask for help."],["اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ","Guide us on the straight path."],["صِرَاطَ الَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ الْمَغْضُوبِ عَلَيْهِمْ وَلَا الضَّالِّينَ","The path of those You have blessed, not of those who earned anger, nor of those who went astray."]],
+94:[["أَلَمْ نَشْرَحْ لَكَ صَدْرَكَ","Did We not open up your heart for you?"],["وَوَضَعْنَا عَنكَ وِزْرَكَ","And lift from you your burden,"],["الَّذِي أَنقَضَ ظَهْرَكَ","which weighed heavily on your back?"],["وَرَفَعْنَا لَكَ ذِكْرَكَ","And raised your name high for you?"],["فَإِنَّ مَعَ الْعُسْرِ يُسْرًا","Truly, with hardship comes ease."],["إِنَّ مَعَ الْعُسْرِ يُسْرًا","Truly, with hardship comes ease."],["فَإِذَا فَرَغْتَ فَانصَبْ","So when you are free, strive on,"],["وَإِلَىٰ رَبِّكَ فَارْغَب","and turn to your Lord with longing."]],
+112:[["قُلْ هُوَ اللَّهُ أَحَدٌ","Say: He is Allah, the One."],["اللَّهُ الصَّمَدُ","Allah, the Eternal Refuge."],["لَمْ يَلِدْ وَلَمْ يُولَدْ","He neither begets nor was born,"],["وَلَمْ يَكُن لَّهُ كُفُوًا أَحَدٌ","and there is none comparable to Him."]]};
+
+/* ---------- Ayah jar ---------- */
+let last=-1,cur="any";
+function show(i,label){last=i;const a=D[i];$("card").innerHTML=`<span class="tag">${ico("star")}${label}</span><div class="ar">${a.ar}</div><div class="ref">${a.ref}</div><p class="mean">${a.en}</p><p>${a.r}</p>
+<details><summary>${ico("scroll")}Related story</summary><p>${a.s}</p><div class="src">Source: ${a.sr}</div></details>
+<details><summary>${ico("leaf")}Hadith</summary><p>${a.h}</p><div class="src">Source: ${a.hr}</div></details>
+<div class="row"><button class="go" id="again">${ico("jar")}Pick another</button></div>`;$("again").onclick=()=>pick(cur)}
+function pick(m){cur=m;let p=D.map((a,i)=>m==="any"||a.m.includes(m)?i:-1).filter(i=>i>=0);
+if(p.length>1)p=p.filter(i=>i!==last);show(p[Math.floor(Math.random()*p.length)],m==="any"?"From the jar":L[m][1])}
+$("moods").innerHTML=Object.keys(L).map(k=>`<button class="chip" data-m="${k}">${ico(L[k][0])}${L[k][1]}</button>`).join("");
+$("moods").onclick=e=>{const b=e.target.closest("button");if(b)pick(b.dataset.m)};
+const now=new Date(),doy=Math.floor((now-new Date(now.getFullYear(),0,0))/864e5);
+show(doy%D.length,"Ayah of the day");
+
+/* ---------- Today ---------- */
+const HM=["Muharram","Safar","Rabi’ al-Awwal","Rabi’ al-Thani","Jumada al-Ula","Jumada al-Akhirah","Rajab","Sha’ban","Ramadan","Shawwal","Dhul Qa’dah","Dhul Hijjah"];
+let hd=1,hm=1,hy=0;
+try{const p=new Intl.DateTimeFormat("en-u-ca-islamic-umalqura",{day:"numeric",month:"numeric",year:"numeric"}).formatToParts(now);
+const g=t=>parseInt(p.find(x=>x.type===t).value,10);hd=g("day");hm=g("month");hy=g("year")}catch(e){hy=0}
+const wd=now.toLocaleDateString("en-US",{weekday:"long"}),gd=now.toLocaleDateString("en-US",{day:"numeric",month:"long",year:"numeric"});
+const hs=hy?`${hd} ${HM[hm-1]} ${hy} AH`:"";
+$("dates").innerHTML=ico("cal")+wd+" · "+gd+(hs?" · "+hs:"");
+const E={"1-1":["Islamic New Year","The Hijri calendar counts from the Prophet’s ﷺ migration to Madinah. Caliph Umar chose the Hijrah as its starting point, because it marked the moment the Muslim community was truly established.","Early Islamic sources (Ibn Kathir, al-Bidayah wa’l-Nihayah)"],
+"1-10":["Day of Ashura","Allah saved Musa (Moses) and the Children of Israel from Pharaoh on this day. The Prophet ﷺ fasted it and encouraged the Muslims to fast it, and Ramadan’s fast later became the obligation.","Sahih al-Bukhari 2004; Sahih Muslim 1130"],
+"3-12":["Mawlid, birth of the Prophet ﷺ","Muhammad ﷺ was born in Makkah in the Year of the Elephant, the year Abraha’s army was turned back from the Ka’bah. This date is widely remembered, though scholars differ on the exact day.","Ibn Hisham, al-Sirah al-Nabawiyyah"],
+"4-25":["Around the Battle of Hattin (583 AH)","Salahuddin al-Ayyubi’s army defeated the Crusader forces at Hattin, opening the way for the liberation of Jerusalem later that year, which was entered with mercy and without revenge.","Ibn al-Athir, al-Kamil fi’l-Tarikh"],
+"5-20":["Conquest of Constantinople (857 AH)","Sultan Muhammad al-Fatih entered Constantinople at age 21, fulfilling a hadith of good news about the city’s conquest. He is remembered for protecting the people’s places of worship.","Musnad Ahmad 18957; Ottoman chronicles"],
+"7-27":["Isra’ and Mi’raj (commonly observed)","In one night the Prophet ﷺ travelled from Makkah to Jerusalem and ascended through the heavens, after the year of sorrow. Five daily prayers were gifted to the ummah. Scholars differ on the exact date.","Quran 17:1; Sahih al-Bukhari 349; Sahih Muslim 162"],
+"9-1":["First day of Ramadan","The month in which the Quran was sent down as guidance. Gates of mercy are opened and the Muslims fast together.","Quran 2:185; Sahih al-Bukhari 1899"],
+"9-17":["Battle of Badr (2 AH)","About 313 poorly equipped believers faced an army of roughly a thousand at Badr. The Prophet ﷺ prayed through the night, and Allah gave the believers victory.","Quran 3:123; Sahih Muslim 1763"],
+"9-20":["Conquest of Makkah (8 AH)","The Prophet ﷺ entered his hometown peacefully with 10,000 companions. Facing those who had harmed him for years, he said: no blame on you today, go, you are free.","Ibn Hisham; Sahih al-Bukhari 4280"],
+"10-1":["Eid al-Fitr","A day of gratitude and joy after Ramadan. Zakat al-Fitr is given so that everyone can celebrate.","Sahih al-Bukhari 1503"],
+"12-9":["Day of Arafah","The most important day of Hajj. On this day in 10 AH the Prophet ﷺ gave his Farewell Sermon, calling for justice, kindness and the equality of all people. Fasting it for non-pilgrims expiates the sins of two years.","Sahih Muslim 1218, 1162"],
+"12-10":["Eid al-Adha","Remembering Prophet Ibrahim’s complete submission, when he and his son Isma’il were ready to obey Allah and Allah replaced the sacrifice with a ram.","Quran 37:102-107"]};
+[21,23,25,27,29].forEach(d=>E["9-"+d]=["An odd night of the last ten","Seek Laylat al-Qadr tonight, the night better than a thousand months. Pray, recite and make dua.","Quran 97:1-5; Sahih al-Bukhari 2017"]);
+const R=[["Khadijah’s comfort","When the Prophet ﷺ first received revelation and returned trembling, Khadijah reassured him that Allah would never disgrace him, because he upheld family ties, helped the needy and was truthful.","Sahih al-Bukhari 3"],
+["The migration to Abyssinia","Persecuted Muslims were sent to the just king Najashi. When Ja’far recited Surah Maryam, the king wept and gave them protection.","Musnad Ahmad 1740"],
+["The Treaty of Hudaybiyyah","The Prophet ﷺ accepted terms that seemed unfair to many companions, for the sake of peace. Allah called it a clear victory, and Islam spread rapidly in the peaceful years after it.","Sahih al-Bukhari 2731; Quran 48:1"],
+["Digging the Trench","Before the Battle of the Trench, the companions dug through hunger, even tying stones to their stomachs. The Prophet ﷺ worked beside them and gave them glad tidings.","Sahih al-Bukhari 4101"],
+["The cave of Thawr","Hunted by Quraysh, the Prophet ﷺ and Abu Bakr hid in a cave. He told his friend not to grieve, because Allah was with them.","Quran 9:40; Sahih al-Bukhari 3653"],
+["The mercy at Ta’if","Stoned and driven out of Ta’if, the Prophet ﷺ was offered to have the mountains crush the city. He refused and hoped for their descendants’ faith.","Sahih al-Bukhari 3231"]];
+function today(){let items=[],ev=E[hm+"-"+hd];const dow=now.getDay();
+if(dow===5)items.push(["Jumu’ah, the best day of the week","Friday holds an hour in which supplication is accepted. Send blessings on the Prophet ﷺ, dress well and make time for Surah Al-Kahf.","Sahih al-Bukhari 935"]);
+if(dow===1||dow===4)items.push([dow===1?"Monday, a day of recommended fasting":"Thursday, a day of recommended fasting","Deeds are presented to Allah on Mondays and Thursdays, and the Prophet ﷺ liked to be fasting when his deeds were presented.","Jami’ at-Tirmidhi 747"]);
+if([13,14,15].includes(hd)&&hy)items.push(["The White Days (Ayyam al-Bid)","The 13th, 14th and 15th of each Hijri month are days of recommended fasting.","Jami’ at-Tirmidhi 761"]);
+if(ev)items.unshift(ev);
+const badges=items.map(x=>`<span class="badge">${ico("star")}${x[0]}</span>`).join("")||`<span class="badge">${ico("sun")}A day of blessing</span>`;
+const sp=items.map(x=>`<p><b>${x[0]}.</b> ${x[1]}<br><span class="src">Source: ${x[2]}</span></p>`).join("")||`<p>No special occasion today, but every day is a chance to do one good deed with sincerity.</p>`;
+const st=ev?null:R[doy%R.length];
+return `<h3>${wd}${hs?", "+hs:""}</h3><div>${badges}</div>${sp}<details${st?"":" open"} ${ev?"":""}><summary>${ico("scroll")}${ev?"Story from Islamic history":"Story from Islamic history: "+(st?st[0]:"")}</summary><p>${ev?ev[1]:st[1]}</p><div class="src">Source: ${ev?ev[2]:st[2]}</div></details><p class="note">Hijri dates can differ by a day depending on local moon sighting.</p>`}
+$("today").innerHTML=today();
+
+/* ---------- Quran reader (loads all 6,236 ayahs) ---------- */
+const API="https://cdn.jsdelivr.net/npm/quran-json@3.1.2/dist/chapters/en/";
+$("surah").innerHTML=N.map((n,i)=>`<option value="${i+1}">${i+1}. ${n} (${C[i]})</option>`).join("");
+const cache={};
+async function load(n){if(cache[n])return cache[n];
+try{const r=await fetch(API+n+".json");if(!r.ok)throw 0;const j=await r.json();return cache[n]=j.verses.map(v=>[v.text,v.translation||""])}
+catch(e){if(F[n])return F[n];throw e}}
+const fail=n=>`<p class="note">The full Quran text loads from the internet when this page is hosted on your own site. In this preview, only Al-Fatihah, Ash-Sharh and Al-Ikhlas are built in. Please pick one of them.</p>`;
+async function readS(n,hl){const out=$("reader");out.innerHTML=`<p class="note">Loading...</p>`;
+try{const v=await load(n);out.innerHTML=`<h3 style="text-align:center">${N[n-1]}</h3>`+v.map((x,i)=>`<div class="v"><div class="ar">${x[0]}</div><small>${n}:${i+1} · ${x[1]}</small></div>`).join("");
+if(hl)out.scrollIntoView({behavior:"smooth"})}catch(e){out.innerHTML=fail(n)}}
+$("read").onclick=()=>readS(+$("surah").value,true);
+$("rnd").onclick=async()=>{let k=Math.floor(Math.random()*6236),s=0;while(k>=C[s]){k-=C[s];s++}
+const n=s+1;try{const v=(await load(n))[k];$("reader").innerHTML=`<div class="v"><span class="tag">${ico("shuffle")}Random ayah</span><div class="ar">${v[0]}</div><div class="ref">${N[s]} ${n}:${k+1}</div><p class="mean">${v[1]}</p><div class="row"><button class="alt" id="whole">${ico("book")}Read the whole surah</button></div></div>`;
+$("whole").onclick=()=>{$("surah").value=n;readS(n,true)}}catch(e){$("reader").innerHTML=fail(n)}};
+
+/* ---------- Email list ---------- */
+// Put the address of your signup server (app.py) here, e.g. "https://signup.yoursite.com"
+const API_URL="";
+$("sub").onsubmit=async e=>{e.preventDefault();const em=$("email").value.trim();
+if(!API_URL){$("msg").textContent="Signup is not connected yet. The site owner needs to set API_URL.";return}
+try{const r=await fetch(API_URL+"/subscribe",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({email:em})});const j=await r.json();
+$("msg").textContent=r.ok?"JazakAllahu khayran! You are on the list.":(j.error||"Something went wrong. Please try again.");if(r.ok)$("email").value=""}
+catch(x){$("msg").textContent="Could not reach the server. Please try again later."}};
+</script></body></html>
